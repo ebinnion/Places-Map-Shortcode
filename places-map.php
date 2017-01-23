@@ -43,6 +43,10 @@ class Places_Map {
 			'initialZoom'      => 2,
 			'initialCenterLat' => '31.9686',
 			'initialCenterLon' => '-99.9018',
+			'clusterImagePath' => plugins_url(
+				'images/m',
+				__FILE__
+			)
 		);
 
 		$args = wp_parse_args( $atts, $defaults );
@@ -103,6 +107,7 @@ class Places_Map {
 					'initialZoom',
 					'initialCenterLat',
 					'initialCenterLon',
+					'clusterImagePath',
 				) )
 			)
 		);
