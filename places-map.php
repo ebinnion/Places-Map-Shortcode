@@ -5,12 +5,12 @@
  * Plugin URI: https://eric.blog
  * Description: Gives you the [places_map] shortcode which allows you to easily embed a map of all of your Instagram pictures!
  * Author: ebinnion
- * Version: 0.1
+ * Version: 0.2
  * Author URI: https://eric.blog
  * License: GPL2+
  */
 
-define( 'PLACES_MAP_VERSION', '0.1' );
+define( 'PLACES_MAP_VERSION', '0.2' );
 
 class Places_Map {
 	private static $instance = null;
