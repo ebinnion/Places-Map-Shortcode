@@ -19,14 +19,18 @@ function initPlacesMap() {
 					'lat': parseFloat( place.lat ),
 					'lng': parseFloat( place.lon )
 				},
+				id: key,
 				url: place.url,
 				label: place.name
 			} );
 			google.maps.event.addListener( marker, 'click', function() {
-				window.location.href = this.url;
+				jQuery.ajax({
+					url: placesMapConfig.restUrl + this.id
+				} ).done( function( data ) {
+					jQuery( '#places-map-images' ).html( data );
+				} );
 			} );
 			markers.push( marker );
-
 		}
 	}
 
